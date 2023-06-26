@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Galactic Empire</title>
+  </head>
+
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar">
+      <div><img class="logo" src="assets/icon-white.png" alt="logo" /></div>
+      <ul class="ul-navbar">
+        <li class="li-navbar"><a href="#">Base</a></li>
+        <li class="li-navbar"><a href="#">About</a></li>
+        <li class="li-navbar"><a href="#">Enlist</a></li>
+      </ul>
+    </nav>
+    <!-- header -->
+    <header class="flex-container">
+      <h1><a href="#">Welcome to the Galactic Empire Enlistment Center</a></h1>
+      <p class="pheader">
+        <a href="#">Unleash Your Potential, Conquer the Cosmos!</a>
+      </p>
+    </header>
+    <!-- main -->
+    <main>
+      <article>
+        <figure class="vader-container">
+          <img
+            class="vader-img"
+            src="assets/vader-small.png"
+            alt="darth vader"
+          />
+          <div>
+            <p class="vader-speech">
+              "Embrace the power of the dark side, trooper. Unleash your
+              unwavering loyalty and strike fear into the hearts of our enemies.
+              Remember, your purpose is to bring order to the galaxy. Stand
+              strong, for together, we shall prevail."
+            </p>
+            <br />
+            <p class="vader-speech">-Darth Vader</p>
+          </div>
+        </figure>
+        <figure id="image-track">
+          <img src="assets/poster (1).jpg" alt="poster1" class="image" />
+          <img src="assets/poster (2).jpg" alt="poster2" class="image" />
+          <img src="assets/poster (3).jpg" alt="poster3" class="image" />
+          <img src="assets/poster (4).jpg" alt="poster4" class="image" />
+        </figure>
+        <article class="flex-container">
+          <iframe
+            id="video"
+            width="100%"
+            height="500"
+            src="https://www.youtube.com/embed/nohQReM7BpI?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            display="block"
+            allowfullscreen
+          ></iframe>
+        </article>
+      </article>
+      <!-- form enlist -->
+      <section class="form-container">
+        <h2>Join Our Ranks Now !</h2>
+        <form action="#">
+          <fieldset>
+            <legend>Personal Data:</legend>
+            <div>
+              <label for="full-name">Full Name:</label>
+              <input id="full-name" type="text" required />
+            </div>
+            <div>
+              <label for="birth">Date of Birth:</label>
+              <input id="birth" type="date" required />
+            </div>
+            <div>
+              <label for="species">Species:</label>
+              <select name="species" id="species">
+                <option value="Human">Human</option>
+                <option value="Wookiee">Wookiee</option>
+                <option value="Hutt">Hutt</option>
+                <option value="Ewok">Ewok</option>
+                <option value="Jawa">Jawa</option>
+                <option value="Tusken">Tusken</option>
+                <option value="Mandalorian">Mandalorian</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Administrative Information:</legend>
+            <div>
+              <p id="reason"><b>Why do You Seek to Join Our Ranks?</b></p>
+              <textarea rows="4" cols="30"></textarea>
+            </div>
+            <div>
+              <div>
+                <p><b>Input Your Resume</b></p>
+                <br />
+                <input
+                  type="file"
+                  id="resume"
+                  name="myresume"
+                  required
+                  accept=".pdf, .DOCTYPE"
+                />
+              </div>
+              <div>
+                <p><b>Oath of Allegiance</b></p>
+                <br />
+                <div class="oath">
+                  <input
+                    id="oath"
+                    type="checkbox"
+                    name="oath"
+                    value="sworn"
+                    required
+                  />
+                  <label class="sworn" for="sworn"
+                    >I pledge my unwavering loyalty to the Galactic Empire, To
+                    uphold its principles and defend its sovereignty, I vow to
+                    serve with honor, courage, and unwavering commitment, To
+                    bring order, stability, and security to the galaxy, I
+                    embrace the power of the dark side, guided by the Sith, To
+                    enforce the will of the Emperor and protect our glorious
+                    empire, Through discipline, unity, and unwavering resolve, I
+                    pledge my life to the Galactic Empire, for the greater good
+                    of all.</label
+                  >
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">Enlist.</button>
+        </form>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer>
+      <p class="p-footer">Copyright © 2023</p>
+      <img class="logo" src="assets/icon-white.png" alt="logo" />
+    </footer>
+  </body>
+</html>
