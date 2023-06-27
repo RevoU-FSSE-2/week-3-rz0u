@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Galactic Empire Enlistment Center for Star Wars fans."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Galactic Empire</title>
@@ -16,6 +20,7 @@
         <li class="li-navbar"><a href="#">About</a></li>
         <li class="li-navbar"><a href="#">Enlist</a></li>
       </ul>
+      <div class="hamburger"></div>
     </nav>
     <!-- header -->
     <header class="flex-container">
@@ -95,12 +100,14 @@
           <fieldset>
             <legend>Administrative Information:</legend>
             <div>
-              <p id="reason"><b>Why do You Seek to Join Our Ranks?</b></p>
+              <label id="reason"
+                ><b>Why do You Seek to Join Our Ranks?</b></label
+              >
               <textarea rows="4" cols="30"></textarea>
             </div>
             <div>
               <div>
-                <p><b>Input Your Resume</b></p>
+                <label><b>Input Your Resume</b></label>
                 <br />
                 <input
                   type="file"
