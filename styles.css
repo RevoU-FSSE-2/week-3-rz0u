@@ -43,14 +43,14 @@ div {
 nav {
   background-color: var(--primary-color);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 20px;
   margin: 2% 5%;
   border-radius: 20px;
   position: sticky;
   top: 0;
-  padding: 0px 10px;
+  padding: 0px 25px;
   box-shadow: 0px 2px 10px black;
   z-index: 99;
 }
@@ -61,7 +61,7 @@ nav {
 .ul-navbar {
   flex-grow: 0.5;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   background-color: var(--primary-color);
 }
@@ -76,6 +76,20 @@ nav {
 }
 .navbar a:hover {
   color: #ff1717;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 5px auto;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--secondary-color);
 }
 .flex-container {
   background-color: var(--primary-color);
@@ -171,6 +185,66 @@ h1 a:hover {
 .image:hover {
   filter: none;
   transition-duration: 1s;
+}
+.carousel-container {
+  background-color: transparent;
+  padding: 0;
+  margin: 2% 5%;
+  border-radius: 20px;
+}
+.slider-wrapper {
+  background-color: transparent;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.slider {
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 20px;
+}
+/* hide scrollbar in IE and webkit blink */
+.slider {
+  -ms-overflow-style: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider img {
+  background-color: transparent;
+  padding: 0;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.slider-nav {
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+  opacity: 1;
 }
 .form-container {
   background-color: var(--primary-color);
@@ -303,10 +377,10 @@ textarea {
   }
 }
 .star {
-  animation: star 3s ease-out infinite;
+  animation: star 5s ease-out infinite;
 }
 .wars {
-  animation: wars 3s ease-out infinite;
+  animation: wars 5s ease-out infinite;
 }
 .starwars-animation {
   perspective: 800px;
@@ -345,6 +419,37 @@ footer {
   .vader-img {
     width: 238px;
     height: auto;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translate(8px, -8px);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px, 8px);
+  }
+  .ul-navbar {
+    position: fixed;
+    /* display: block; */
+    left: -200%;
+    top: 80px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 87vmin;
+    overflow: hidden;
+    margin: 0 5%;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px black;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .li-navbar {
+    margin: 16px 0;
+  }
+  .ul-navbar.active {
+    left: 0;
   }
 }
 @media screen and (max-width: 1024px) {

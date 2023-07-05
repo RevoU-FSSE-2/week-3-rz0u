@@ -9,20 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Galactic Empire</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/2/22/StormtrooperHelmetIcon.svg"
+    />
   </head>
 
   <body>
-
     <!-- navigation bar -->
 
     <nav class="navbar">
       <div><img class="logo" src="assets/icon-white.png" alt="logo" /></div>
       <ul class="ul-navbar">
-        <li class="li-navbar"><a href="#">Base</a></li>
-        <li class="li-navbar"><a href="#about">About</a></li>
-        <li class="li-navbar"><a href="#enlist">Enlist</a></li>
+        <li class="li-navbar"><a href="#" class="nav-link">Base</a></li>
+        <li class="li-navbar"><a href="#about" class="nav-link">About</a></li>
+        <li class="li-navbar"><a href="#enlist" class="nav-link">Enlist</a></li>
       </ul>
-      <div class="hamburger"><a href="h2"></a></div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
 
     <!-- header -->
@@ -38,48 +46,107 @@
 
     <main>
       <article id="about">
-          <figure class="vader-container">
-            <picture>
-              <source media="(max-width: 430px)" srcset="assets/vader-small-responsive.png">
-              <img
+        <figure class="vader-container">
+          <picture>
+            <source
+              media="(max-width: 430px)"
+              srcset="assets/vader-small-responsive.png"
+            />
+            <img
               class="vader-img"
               src="assets/vader-small.png"
               alt="darth vader"
             />
-            </picture>
-            <div>
-              <p class="vader-speech">
-                "Embrace the power of the dark side, trooper. Unleash your
-                unwavering loyalty and strike fear into the hearts of our
-                enemies."
-              </p>
-              <br />
-              <p class="vader-speech">-Darth Vader</p>
-            </div>
-          </figure>
-          <figure id="image-track">
-            <img src="assets/poster (3).jpeg" alt="poster1" class="image" id="poster"/>
-            <img src="assets/poster (2).jpeg" alt="poster2" class="image" id="poster2" />
-            <img src="assets/poster (1).jpeg" alt="poster3" class="image" id="main-poster"/>
-            <img src="assets/poster (4).jpeg" alt="poster4" class="image" id="poster4" />
-            <img src="assets/poster (5).jpeg" alt="poster5" class="image" id="poster5"/>
-
-          </figure>
-          <article class="spotify-container">
-            <iframe
-              id="audio"
-              title="Galactic Empire March"
-              style="border-radius: 12px"
-              width="100%"
-              height="152"
-              src="https://open.spotify.com/embed/track/7a9UUo3zfID7Ik2fTQjRLi?utm_source=generator&theme=0"
-              frameborder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              display="block"
-            ></iframe>
+          </picture>
+          <div>
+            <p class="vader-speech">
+              "Embrace the power of the dark side, trooper. Unleash your
+              unwavering loyalty and strike fear into the hearts of our
+              enemies."
+            </p>
+            <br />
+            <p class="vader-speech">-Darth Vader</p>
+          </div>
+        </figure>
+        <figure id="image-track">
+          <img
+            src="assets/poster (3).jpeg"
+            alt="poster1"
+            class="image"
+            id="poster"
+          />
+          <img
+            src="assets/poster (2).jpeg"
+            alt="poster2"
+            class="image"
+            id="poster2"
+          />
+          <img
+            src="assets/poster (1).jpeg"
+            alt="poster3"
+            class="image"
+            id="main-poster"
+          />
+          <img
+            src="assets/poster (4).jpeg"
+            alt="poster4"
+            class="image"
+            id="poster4"
+          />
+          <img
+            src="assets/poster (5).jpeg"
+            alt="poster5"
+            class="image"
+            id="poster5"
+          />
+        </figure>
+        <article class="spotify-container">
+          <iframe
+            id="audio"
+            title="Galactic Empire March"
+            style="border-radius: 12px"
+            width="100%"
+            height="152"
+            src="https://open.spotify.com/embed/track/7a9UUo3zfID7Ik2fTQjRLi?utm_source=generator&theme=0"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            display="block"
+          ></iframe>
         </article>
-
+        <article class="carousel-container">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <img
+                id="slide-1"
+                src="assets/carousel (1).png"
+                alt="starwars scenery battleships"
+              />
+              <img
+                id="slide-2"
+                src="assets/carousel (2).jpg"
+                alt="starwars scenery battleship with planet behind it"
+              />
+              <img
+                id="slide-3"
+                src="assets/carousel (3).jpg"
+                alt="starwars scenery AT-AT with nature"
+              />
+              <img
+                id="slide-4"
+                src="assets/carousel (4).jpg"
+                alt="starwars scenery naboo planet"
+              />
+            </div>
+            <div class="slider-nav">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+              <a href="#slide-4"></a>
+            </div>
+          </div>
+        </article>
+      </article>
 
       <!-- form enlist -->
 
@@ -159,8 +226,16 @@
         </form>
       </section>
       <section class="starwars-animation">
-          <img src="//cssanimation.rocks/demo/starwars/images/star.svg" alt="Star" class="star">
-          <img src="//cssanimation.rocks/demo/starwars/images/wars.svg" alt="Wars" class="wars">
+        <img
+          src="//cssanimation.rocks/demo/starwars/images/star.svg"
+          alt="Star"
+          class="star"
+        />
+        <img
+          src="//cssanimation.rocks/demo/starwars/images/wars.svg"
+          alt="Wars"
+          class="wars"
+        />
       </section>
     </main>
     <!-- footer -->
@@ -168,5 +243,6 @@
       <p class="p-footer">Copyright © 2023</p>
       <img class="logo" src="assets/icon-white.png" alt="logo" />
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
